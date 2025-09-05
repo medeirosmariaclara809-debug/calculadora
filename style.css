@@ -1,0 +1,115 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+
+
+
+:root{
+--cordosnomes:rgb(255, 193, 203);
+--cordacalculadora:rgb(224, 118, 132);
+--cordosnumeros:rgb(253, 225, 230);
+--cordaborda: beige;
+--cordosbotoes:white;
+}
+
+
+body{
+    background-image: url('https://images4.alphacoders.com/303/thumb-1920-30304.png'); 
+    background-repeat: no-repeat;  
+    background-size: cover;        
+    background-position: center;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
+
+#calc{
+    width: 400px;
+    padding: 0.5em;
+    background-color:var(--cordacalculadora) ;
+    color: black;
+    display:flex;
+    flex-direction: column;
+}
+
+#calc h3{
+    font-size: 1.5em;
+    font-weight:500;
+    color: var(--cordosnomes);
+}  
+ #operations{
+    text-align: right;
+}
+
+#previous-operation,
+#current-operation{
+ min-height:1.6em;   
+ padding:0.2em;
+ overflow-wrap: break-word;
+}
+
+#previous-operation{
+    color: var(--cordosnumeros);
+}
+
+#current-operation{
+    font-size: 3em;
+    font-weight:700;    
+    color:var(--cordaborda)
+}
+
+#botao{
+ display:grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ gap: 3px;
+}
+
+#botao button{
+    border:1px solid transparent;
+    border-radius:2px;
+    height: 4em;
+    font-size:1.2em;
+    background-color: var(--cordosnomes);
+    cursor: pointer;
+}
+#botao button:hover{
+   background-color: rgb(247, 155, 170);
+   border: 2px solid rgb(247, 129, 148);
+
+}
+#botao button.numero {
+  background-color: #f3f3f3;
+}
+
+#botao button.numero:hover{
+    border: 2px solid rgb(255, 196, 211);
+    background-color: rgb(253, 225, 230)
+    
+}
+#botao #equal-btn{
+    grid-column: span 2;
+    background-color: rgb(127, 251, 255);
+} 
+
+#botao #equal-btn:hover{
+    background-color: rgb(129, 236, 240); 
+    border: 2px solid rgb(87, 212, 221);
+}
+.rodape{
+    color: #000000;
+    background-color: white;
+    padding: 3px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 400;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
